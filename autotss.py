@@ -1,3 +1,5 @@
+#!/bin/env python3
+
 import requests as r
 import configparser
 import subprocess
@@ -144,6 +146,7 @@ class autotss:
 						'-e', device['deviceECID'],
 						'--boardconfig', device['boardConfig'],
 						'--buildid', buildID,
+						'-g', '0x1111111111111111',
 						'--save-path', savePath,
 						'-s']
 
